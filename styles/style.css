@@ -1,0 +1,897 @@
+:root {
+    --maincolor: rgb(13, 13, 13);
+    --secondarycolor: #37B7ED;
+    --shadowcolor: black;
+    --secondaryshadowcolor: #37B7ED;
+
+    --textcolor: white;
+    --secondarytextcolor: black;
+    --captionbackground: white;
+    --captiontextcolor: black;
+
+}
+
+* {
+    scroll-behavior: smooth;
+    font-family: Raleway, 'Mulish', 'Open Sans', 'Verdana', 'Arial';
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    background-color: var(--maincolor);
+}
+
+.page-section {
+    color: var(--textcolor);
+}
+
+/*nav bar menu*/
+nav {
+    background-color: var(--maincolor);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 2px solid var(--secondarycolor);
+
+}
+
+/*items in the menu*/
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 30%;
+
+}
+
+/*removing deocoration from list and displaying list as flex in the navbar*/
+li a {
+
+    list-style-type: none;
+    display: flex;
+    font-weight: bolder;
+    margin: 20px;
+    text-decoration: none;
+    color: var(--secondarycolor);
+    width: fit-content;
+}
+
+/*hover in the links nav menu items*/
+li a:hover {
+    background-color: var(--secondarycolor);
+    color: var(--maincolor);
+    border-radius: 5%;
+
+
+}
+
+/*defining style for the logo area in the left side of the nav, in this case my name*/
+.logo {
+    background-color: var(--secondarycolor);
+    color: var(--maincolor);
+    padding-right: 25px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+/*defining style for the text in my logo in this case my name*/
+#myNameinNav {
+    margin-left: 10px;
+    margin-top: 10%;
+    text-align: center;
+    font-family: Unbounded, 'Raleway', 'Mulish', 'Open Sans', 'Arial';
+    font-weight: bold;
+
+
+}
+
+
+/*defining grid areas and size*/
+.intro {
+    padding-top: 10%;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 'introAside introArticle';
+    background-color: var(--maincolor);
+    margin-left: 20%;
+}
+
+#introAside {
+    grid-area: introAside;
+    margin-left: 4%;
+    color: var(--textcolor);
+    display: flex;
+
+}
+
+#introArticle {
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-area: introArticle;
+    color: var(--textcolor);
+    width: fit-content;
+    font-family: Mulish, 'Unbounded', 'Open Sans';
+    box-shadow: 0px 0px 20px var(--secondarycolor);
+    border-radius: 5px;
+    display: flex;
+
+}
+
+#introText > h2
+{
+    margin-bottom: 1.5vh;
+}
+
+/*For spacing of the text inside the box*/
+#introText {
+    margin-top: 7%;
+    text-align: justify;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*styling my profile pic, defining size and shape*/
+.mypic {
+    overflow: hidden;
+    border: var(--secondarycolor);
+    border-radius: 20%;
+    height: 25vh;
+    box-shadow: -4px 6px 10px var(--secondarycolor);
+}
+
+#profilePic {
+    text-align: center;
+}
+
+/*Caption  below my profile Pic*/
+.myName {
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+    color: var(--textcolor);
+}
+
+/*About Me Grid*/
+#aboutMeGrid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+    grid-template-areas: 'aboutMeAside aboutMeArticle';
+    margin-top: 5%;
+
+}
+
+/*Defining About me 1st column Grid Area*/
+#aboutMeAside {
+    grid-area: aboutMeAside;
+    margin-left: 20%;
+
+}
+
+/*Defining About me 2nd column Grid Area*/
+#aboutMeArticle {
+    grid-area: aboutMeArticle;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: 0.5vh;
+    text-align: justify;
+    margin-right: 8%;
+}
+
+/*border for aside of aboutme,work, project, resume, contactme*/
+.asideBorder {
+    border-right: 4px solid var(--secondarycolor);
+    display: flex;
+    margin-right: 15%;
+}
+
+/* Projects/Work grid of 2 columns*/
+#workGrid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+    grid-template-areas: 'workAside workArticle';
+    margin-top: 5%;
+}
+
+/* Defining margins for Work aside */
+#workAside {
+    grid-area: workAside;
+    margin-left: 20%;
+}
+
+#workArticle {
+    grid-area: workArticle;
+}
+
+
+/* Defining the grid layout for the project/work images*/
+#projectsGrid {
+    display: grid;
+    margin-left: 5%;
+    margin-right: 7%;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        'project1 project1'     /*1st row*/
+        'project2 project3'     /*2nd row*/
+        'project4 project5';    /*3rd row*/
+}
+
+.projects {
+    margin: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.8s;
+}
+
+.projects a
+{
+    text-decoration: none;
+}
+
+.projects:hover {
+    box-shadow: -4px 3px 3px var(--secondarycolor);
+}
+
+#project1 {
+    grid-area: project1;
+    background-image: url("../images/02-portfolio-1.jpg");
+    width: inherit;
+    height: auto;
+}
+
+
+#project2 {
+    grid-area: project2;
+    background-image: url("../images/02-hero-bg.jpg");
+    width: inherit;
+    height: auto;
+}
+
+#project3 {
+    grid-area: project3;
+    background-image: url("../images/02-portfolio-3.jpg");
+    width: inherit;
+    height: auto;
+}
+
+#project4 {
+    grid-area: project4;
+    background-image: url("../images/02-portfolio-4.jpg");
+    width: inherit;
+    height: auto;
+
+}
+
+#project5 {
+    grid-area: project5;
+    background-image: url("../images/02-portfolio-2.jpg");
+    width: inherit;
+    height: auto;
+}
+
+/*Project Caption*/
+#projectcaption {
+    align-items: left;
+    padding: 10px;
+    margin-top: 7%;
+    background-color: var(--maincolor);
+    color: var(--secondarycolor);
+    width: fit-content;
+    text-align: left;
+    border: 2px solid var(--secondarycolor);
+    border-left: none;
+    transition: transform 0.9s;
+}
+
+#projectcaption:hover {
+    transform: scale(1.1);
+}
+
+/*Contact Me Grid */
+#contactMeGrid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+    grid-template-areas: 'asideContactMe articleContactMe';
+    margin-top: 10%;
+}
+
+#asideContactMe {
+    grid-area: asideContactMe;
+    margin-left: 20%;
+
+}
+
+.articleContactMe {
+    grid-area: articleContactMe;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+/*Defining Grid Area for the Icons to be used in media for mobile and tablets */
+.call {
+    grid-area: call;
+}
+
+.email {
+    grid-area: email;
+    ;
+}
+
+.linkedin {
+    grid-area: linkedin;
+}
+
+
+/*setting the icons in contact me to the secondary color*/
+.contactIcons {
+    color: var(--secondarycolor);
+    transition: transform 1.2s;
+}
+
+.contactIcons:hover {
+    transform: scale(1.3);
+}
+
+.contactCaption {
+    align-items: center;
+    justify-content: center;
+    color: var(--textcolor);
+    margin-top: 10%;
+}
+
+.articleContactMe a {
+    text-decoration: none;
+
+}
+
+
+/*Resume Grid*/
+#resumeGrid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+    grid-template-areas: 'asideResume articleResume';
+    margin-top: 10%;
+    margin-bottom: 15%;
+}
+
+#asideResume {
+    grid-area: asideResume;
+    margin-left: 20%;
+}
+
+#articleResume {
+    grid-area: articleResume;
+    margin-left: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+#articleResume a {
+    color: var(--secondarycolor);
+}
+
+
+
+/*Style for tablets*/
+@media screen and (max-width:768px) 
+{
+
+    /* defining font size for tablet*/
+    h4 {
+        font-size: 0.8em;
+    }
+
+    h3 {
+        font-size: 1.0em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    /*nav bar menu for tablet*/
+    nav
+    {
+        background-color: var(--maincolor);
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        overflow: hidden;
+        border-bottom: 2px solid var(--secondarycolor);
+
+    }
+
+    /*realigning items in the menu for tablet*/
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 15%;
+
+    }
+
+    .intro
+    {
+        margin-left: 5%;
+    }
+
+    /* margins for introAside for tablet */
+    .introAside
+    {
+        margin-left: 5%;
+        
+    }
+
+    #introArticle
+    {
+        margin-right: 5% ;
+    }
+
+    #introText > h2
+    {
+        margin-bottom: 1vh;
+    }
+
+    .mypic
+    {
+        overflow: hidden;
+        border: var(--secondarycolor);
+        border-radius: 20%;
+        height: 22vh;
+        box-shadow: -4px 6px 10px var(--secondarycolor);    
+    }
+
+     /*About Me Grid for Tablet*/
+     #aboutMeGrid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'aboutMeAside'
+            /*1st row*/
+            'aboutMeArticle';
+        /*2nd row*/
+        margin-top: 5%;
+    }
+
+    /* About me Article text for Tablet */
+    #aboutMeArticle {
+        grid-area: aboutMeArticle;
+        justify-content: center;
+        align-items: center;
+        margin-left: 12%;
+        margin-top: 0.1vh;
+        text-align: justify;
+        margin-right: 10%;
+    
+    }
+
+    #workGrid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'workAside'
+            /*1st row*/
+            'workArticle';
+        /*2nd row*/
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+    }
+
+    /*Centering Aside Text and Items to Centre for Tablet*/
+    .aboutMeAside .workAside .asideContactMe .asideResume {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: none;
+    }
+
+    .projects
+    {
+        margin: 0vh;
+    }
+
+    /* Adding box shadow by default to project pictures to show separation */
+    .projects 
+    {
+        margin: 1vh;
+        box-shadow: 0px 0px 12px var(--secondarycolor);
+    }
+
+    /* removing box shadow from hover */
+    .projects:hover
+    {
+        box-shadow: none
+    }
+
+    /* Defining the grid layout as rows for Tablet*/
+    #projectsGrid 
+    {
+        display: grid;
+        margin-left: -20%;
+        margin-right: -20%;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas:
+        'project1' 
+        'project2'
+        'project3' 
+        'project4' 
+        'project5';       
+        grid-gap: 1em;
+    }
+
+
+    /*Contact Me Grid */
+    #contactMeGrid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'asideContactMe'    /*1st row*/
+            'articleContactMe'; /*2nd row*/
+        margin-top: 10%;
+    }
+    
+    /*Creating a Grid for the Icons of 2/2 columns and rows*/
+    .articleContactMe {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'call email'        /*1st row*/
+            'linkedin github';   /*2nd row*/
+            
+        
+        grid-gap: 5em;
+
+    }
+
+    .contactCaption {
+        align-items: center;
+        justify-content: center;
+        color: var(--textcolor);
+        margin-top: 2%;
+    }
+
+    /*Resume Grid for Mobile*/
+    #resumeGrid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'asideResume'
+            /*1st row*/
+            'articleResume';
+        /*2nd row*/
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+    #asideResume
+    {
+        margin-bottom: 2%;
+    }
+
+    #articleResume {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 20%;
+
+    }
+
+    .asideBorder {
+        border-bottom: 2px solid var(--secondarycolor);
+        display: flex;
+        margin-bottom: 5%;
+        margin-top: 5px;
+        border-right: none;
+    }
+
+}
+
+/*Style for Mobiles*/
+@media screen and (max-width:480px) {
+
+    .asideBorder {
+        border-bottom: 2px solid var(--secondarycolor);
+        display: flex;
+        margin-bottom: 5%;
+        margin-top: 5px;
+        border-right: none;
+    }
+
+    h4 {
+        font-size: 0.8em;
+    }
+
+    h3 {
+        font-size: 1.0em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    /* Mobile nav menu */
+    nav {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas: 'logo' 'navMenulist';
+        position: relative;
+    }
+
+    /* List items for Mobile nav */
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 0.5%;
+    
+    }
+
+   li a 
+   {
+        margin: 20px;
+        text-decoration: none;
+        color: var(--secondarycolor);
+        width: fit-content;
+    }
+
+    .logo {
+        grid-area: logo;
+        text-align: center;
+    }
+
+    #myNameinNav {
+        text-align: center;
+        margin-bottom: 1.5%;
+    }
+
+    .navMenulist {
+        grid-area: navMenulist;
+        justify-content: space-between;
+    }
+
+    .navMenulist li a {
+        grid-area: navMenulist;
+        justify-content: space-between;
+    }
+
+    /* Displaying each area as a row for mobile*/
+    .intro {
+
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'introAside' /* 1st row*/
+            'introArticle'; /* 2nd row*/
+       
+    }
+
+    .mypic {
+        overflow: hidden;
+        border: var(--secondarycolor);
+        border-radius: 20%;
+        height: 23vh;
+        box-shadow: -4px 3px 10px var(--secondarycolor);
+    }
+
+    .myName
+    {
+        word-wrap:normal;
+    }
+    #profilePic {
+        text-align: center;
+    }
+
+
+    #introAside {
+        grid-area: inherit;
+        margin-bottom: 5%;
+    }
+
+
+    #introArticle {
+        grid-area: inherit;
+        color: var(--textcolor);
+        margin-top: 5%;
+        margin-bottom: 10%;
+        margin-left: 7%;
+        margin-right: 7%;
+        word-wrap: wrap;
+    }
+
+    #introText {
+        margin-top: 7%;
+        margin-bottom: 7%;
+        margin-left: 7%;
+        margin-right: 7%;
+        flex-wrap: wrap;
+        text-align: justify;
+
+    }
+
+    
+    /*Caption below my profile Pic for mobile*/
+    .myName {
+        margin-top: 2%;
+        justify-content: center;
+        align-items: center;
+        color: var(--textcolor);
+        font-weight: lighter;
+    }
+
+    /*About Me Grid for Mobile*/
+    #aboutMeGrid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'aboutMeAside'
+            /*1st row*/
+            'aboutMeArticle';
+        /*2nd row*/
+        margin-top: 5%;
+    }
+
+    #aboutMeAside
+    {
+        margin-bottom: 3vh;
+    }
+
+    /* About me Article text for Mobile */
+    #aboutMeArticle {
+        grid-area: aboutMeArticle;
+        justify-content: center;
+        align-items: center;
+        margin-left: 12%;
+        margin-top: 0.1vh;
+        text-align: justify;
+        margin-right: 12%;
+    
+    }
+
+    #workGrid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'workAside'
+            /*1st row*/
+            'workArticle';
+        /*2nd row*/
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+    }
+
+    /*Centering Aside Text and Items to Centre for Mobile*/
+    .aboutMeAside .workAside .asideContactMe .asideResume {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: none;
+    }
+
+    /* Adding box shadow for mobile version without having to hover */
+    .projects {
+        margin: 1vh;
+        box-shadow: 0px 0px 12px var(--secondarycolor);
+    }
+
+
+    /* Removing box-shadow for mobile for hover */
+    .projects:hover {
+        box-shadow: none;
+    }
+
+    /* Defining the grid layout as rows for Mobile*/
+    #projectsGrid {
+        display: grid;
+        margin-left: 7%;
+        margin-right: 7%;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas:
+            'project1'
+            /*1st row*/
+            'project2'
+            /*2nd row*/
+            'project3'
+            /*3rd row*/
+            'project4'
+            /*4th row*/
+            'project5';
+        /*5th row*/
+
+        grid-gap: 0.5em;
+    }
+
+    /*Contact Me Grid */
+    #contactMeGrid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'asideContactMe'
+            /*1st row*/
+            'articleContactMe';
+        /*2nd row*/
+        margin-top: 10%;
+    }
+
+    /*Creating a Grid for the Icons to stack up as rows*/
+    .articleContactMe {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'call'
+            /*1st row*/
+            'email'
+            /*2nd row*/
+            'linkedin';
+        /*3rd row*/
+        grid-gap: 4em;
+
+    }
+
+    .contactCaption {
+        align-items: center;
+        justify-content: center;
+        color: var(--textcolor);
+        margin-top: 2%;
+    }
+
+    /*Resume Grid for Mobile*/
+    #resumeGrid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'asideResume'
+            /*1st row*/
+            'articleResume';
+        /*2nd row*/
+        margin-top: 10%;
+        margin-bottom: 15%;
+    }
+
+    #articleResume {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 20%;
+    }
+
+    
+    
+}
