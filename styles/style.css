@@ -130,10 +130,8 @@ li a:hover
     margin-left: 10%;
     margin-right: 10%;
     grid-area: introArticle;
-    color: var(--secondarytextcolor);
+    color: var(--textcolor);
     width: fit-content;
-    border-radius: 5px;
-    border: 3px dotted var(--textcolor);
     display: flex;
 
 }
@@ -206,6 +204,7 @@ li a:hover
     /* border-right: 3px solid var(--textcolor); */
     display: flex;
     margin-right: 15%;
+    font-weight: bolder;
 }
 
 /* Projects/Work grid of 2 columns*/
@@ -295,17 +294,20 @@ li a:hover
 /*Project Caption*/
 #projectcaption {
     align-items: left;
-    /* padding: 5px; */
-    margin-top: auto;
+    padding: 7px;
+    margin: auto;
     /* background: linear-gradient(90deg ,var(--gradientcolor1) 0%, var(--gradientcolor2) 59%, var(--gradientcolor3) 100%) ; */
     color: var(--textcolor);
     width: 100%;
     height: 20%;
     text-align: left;
-    border: 2px solid var(--textcolor);
-    border-left: none;
-    border-top: none;
+    border-bottom: 2px solid var(--textcolor);
     transition: transform 0.9s;
+}
+
+#projectcaption > h2 , h5
+{
+    margin-left: 2%;
 }
 
 #projectcaption:hover {
@@ -396,10 +398,16 @@ li a:hover
     justify-content: center;
 }
 
-#articleResume a {
-    color: var(--secondarycolor);
+footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--textcolor);
+    margin: auto;
+    margin-bottom: 4%;
+    border-top: 2px solid var(--textcolor);
 }
-
 
 
 /*Style for tablets*/
