@@ -17,9 +17,11 @@ body, nav,main, .jumbotron
 {
     background: var(--gradientcolor1);
     background: linear-gradient(90deg ,var(--gradientcolor1) 0%, var(--gradientcolor2) 59%, var(--gradientcolor3) 100%) ;
+    
 }
 
-* {
+* 
+{
     scroll-behavior: smooth;
     font-family: 'Questrial', 'Mulish', 'Open Sans', 'Verdana', 'Arial';
     margin: 0px;
@@ -32,15 +34,13 @@ body, nav,main, .jumbotron
 }
 
 /*nav bar menu*/
-nav {
+nav 
+{
     position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    /* overflow: hidden; */
-    border-bottom: 2px solid var(--secondarycolor);
-
 }
 
 /*items in the menu*/
@@ -48,8 +48,7 @@ ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: center;
     margin: auto;
 
 }
@@ -64,14 +63,19 @@ li a {
     text-decoration: none;
     color: var(--textcolor);
     width: fit-content;
+    font-size: larger;
+    letter-spacing: 2px;
+    margin-top: 2%;
 }
 
 /*hover in the links nav menu items*/
 li a:hover 
 {
-    background-color: var(--secondarycolor);
-    color: var(--maincolor);
+    color: var(--textcolor);
     border-radius: 5%;
+    text-decoration: none;
+    box-shadow: 0px 0px 20px var(--textcolor);
+    
 }
 
 /*defining style for the logo area in the left side of the nav, in this case my name*/
@@ -82,6 +86,8 @@ li a:hover
     justify-content: flex-start;
     align-items: center;
     text-align: center;
+    color: var(--textcolor);
+    margin-left: 5%;
 }
 
 /*defining style for the text in my logo in this case my name*/
@@ -152,7 +158,7 @@ li a:hover
     border: var(--secondarycolor);
     border-radius: 20%;
     height: 25vh;
-    box-shadow: -4px 6px 10px var(--secondarycolor);
+    box-shadow: -4px 6px 10px var(--textcolor);
 }
 
 #profilePic {
@@ -330,6 +336,21 @@ li a:hover
 
 }
 
+/* .articleContactMe {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        'call'
+        /*1st row*/
+        'email'
+        /*2nd row*/
+        'linkedin';
+    /*3rd row*/
+    grid-gap: 4em;
+
+} */
+
 /*Defining Grid Area for the Icons to be used in media for mobile and tablets */
 .call {
     grid-area: call;
@@ -337,7 +358,6 @@ li a:hover
 
 .email {
     grid-area: email;
-    ;
 }
 
 .linkedin {
@@ -347,7 +367,7 @@ li a:hover
 
 /*setting the icons in contact me to the secondary color*/
 .contactIcons {
-    color: var(--secondarycolor);
+    color: var(--textcolor);
     transition: transform 1.2s;
 }
 
@@ -359,7 +379,7 @@ li a:hover
     align-items: center;
     justify-content: center;
     color: var(--textcolor);
-    margin-top: 10%;
+    /* margin-top: 10%; */
 }
 
 .articleContactMe a {
