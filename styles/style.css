@@ -228,17 +228,17 @@ li a:hover
 
 
 /* Defining the grid layout for the project/work images*/
-#projectsGrid {
+/* #projectsGrid {
     display: grid;
     margin-left: 5%;
     margin-right: 7%;
-    grid-template-rows: 200px 200px 200px;
+    grid-template-rows:200px 200px 200px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-        'project1 project1'     /*1st row*/
-        'project2 project3'     /*2nd row*/
-        'project4 project5';    /*3rd row*/
-}
+        'project1 project1'     
+        'project2 project3'   
+        'project4 project5';    
+}  */
 
 .projects 
 {
@@ -271,11 +271,10 @@ li a:hover
 
 #project3 {
     grid-area: project3;
-    
+    background-image: url("../images/02-portfolio-3.jpg");
     width: inherit;
     height: auto;
 }
-
 
 #project4 {
     grid-area: project4;
@@ -293,12 +292,12 @@ li a:hover
 }
 
 /*Project Caption*/
-#projectcaption {
-    align-items: left;
+#projectcaption 
+{
     /* padding: 7px; */
     /* background-color; */
     margin: none;
-    background-color: ;
+    background-color: white ;
     color: var(--textcolor);
     width: 100%;
     height: max-content;
@@ -315,6 +314,8 @@ li a:hover
 #projectcaption:hover {
     transform: scale(1.1);
 }
+
+/* Skills Grid */
 
 /*Contact Me Grid */
 #contactMeGrid {
