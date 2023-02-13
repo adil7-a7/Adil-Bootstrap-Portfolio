@@ -369,6 +369,16 @@ li a:hover
     text-align: center;
 
 }
+.skillsIcons
+{
+    color: var(--textcolor);
+    text-align: center;
+}
+
+.wireframeImg, .prototypeImg, .uxImg
+{
+    width: 50px;
+}
 
 /*Defining Grid Area for the Icons to be used in media for mobile and tablets */
 .call {
