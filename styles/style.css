@@ -316,6 +316,34 @@ li a:hover
 }
 
 /* Skills Grid */
+#skillsGrid
+{
+    margin-top: 10%;
+    display:grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+    grid-template-areas: 'asideSkills articleSkills';
+}
+
+/* Grid area for aside and article skills */
+#asideSkills
+{
+    grid-area: asideSkills;
+    margin-left: 20%;
+}
+
+.articleSkills
+{   
+    grid-area: articleSkills;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    text-align: center;
+    width: 90%; */
+}
+
+
 
 /*Contact Me Grid */
 #contactMeGrid {
