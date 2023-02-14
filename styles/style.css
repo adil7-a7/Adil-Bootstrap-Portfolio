@@ -230,20 +230,6 @@ li a:hover
     
 }
 
-
-/* Defining the grid layout for the project/work images*/
-/* #projectsGrid {
-    display: grid;
-    margin-left: 5%;
-    margin-right: 7%;
-    grid-template-rows:200px 200px 200px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-        'project1 project1'     
-        'project2 project3'   
-        'project4 project5';    
-}  */
-
 .projects 
 {
     
