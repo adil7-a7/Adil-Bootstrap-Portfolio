@@ -713,7 +713,7 @@ footer
     }
 
     .asideBorder {
-        border-bottom: 2px solid var(--secondarycolor);
+        border-bottom: 2px solid var(--textcolor);
         display: flex;
         margin-bottom: 5%;
         margin-top: 5px;
@@ -726,7 +726,7 @@ footer
 @media screen and (max-width:480px) {
 
     .asideBorder {
-        border-bottom: 2px solid var(--secondarycolor);
+        border-bottom: 2px solid var(--textcolor);
         display: flex;
         margin-bottom: 5%;
         margin-top: 5px;
