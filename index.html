@@ -89,14 +89,14 @@
       <article id="workArticle">
 
         <!--Grid container for the project images and caption-->
-        <div id="projectsGrid">
+        <!-- <div id="projectsGrid"> -->
           <!--1st row of project/work -->
-          <div class="row">
+          <div class="row" class="projects">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm12">
-              <div class='card' class="projects">
-                <div id="project1">
+              <div class='card'> 
+                <div class = "projectImage" id="project1">
                   <div class="card-title">
-                    <h2>Password Generator</h2>
+                    <h2 class="title-bg">Password Generator</h2>
                   </div>
 
                   <div class="card-body">
@@ -116,12 +116,12 @@
           </div>
 
           <!--2nd row of grid/projects-->
-          <div class="row">
+          <div class="row" class="projects">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm12">
               <div class='card' class="projects">
-                <div id="project2">
+                <div class = "projectImage" id="project2">
                   <div class="card-title">
-                    <h2> STUDEAT - Food for Students</h2>
+                    <h2 class="title-bg"> STUDEAT - Food for Students</h2>
                   </div>
 
                   <div class="card-body">
@@ -140,12 +140,13 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div><!--columns ends here-->
 
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm12">
-              <div class='card' class="projects" id="project3">
+              <div class='card' class="projects" >
+              <div class = "projectImage" id="project3">
                 <div class="card-title">
-                  <h2> Flight Booking Site</h2>
+                  <h2 class="title-bg"> Flight Booking Site</h2>
                 </div>
 
                 <div class="card-body">
@@ -161,52 +162,57 @@
                   </figcaption>
                 </div>
               </div>
-            </div>
-          </div>
+            </div>    
+            </div><!--columns ends here-->
+          </div> <!--row ends here-->
 
           <!--3rd row for projects/work-->
-          <div class="row">
+          <div class="row" class="projects">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm12">
-              <div class="card" class="projects" id="project4">
-                <div class="card-title">
-                  <h2> E-Commerce Site</h2>
-                </div>
+              <div class="card" class="projects"> 
+                <div class = "projectImage" id="project4">
+                    <div class="card-title">
+                      <h2 class="title-bg"> E-Commerce Site</h2>
+                    </div>
 
-                <div class="card-body">
-                  <figure>
-                  </figure>
-                </div>
+                    <div class="card-body">
+                      <figure>
+                      </figure>
+                    </div>
 
-                <div class="card-footer">
-                  <figcaption id="projectcaption">
-                    <h5> FIGMA / WORDPRESS / WOOCOMMERCE </h5>
-                    <h5>Coming Soon!</h5>
-                  </figcaption>
-                </div>
-              </div>
+                    <div class="card-footer">
+                      <figcaption id="projectcaption">
+                        <h5> FIGMA / WORDPRESS / WOOCOMMERCE </h5>
+                        <h5>Coming Soon!</h5>
+                      </figcaption>
+                    </div>
+                  </div> 
+              </div>  
             </div>
 
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm12">
-              <div class="card" class="projects" id="project5">
-                <div class="card-title">
-                  <h2> Bus Booking Website </h2>
-                </div>
+              <div class="card" class="projects">
+                <div class = "projectImage" id="project5">
+                  <div class="card-title">
+                    <h2 class="title-bg"> Bus Booking Website </h2>
+                  </div>
 
-                <div class="card-body">
-                  <figure>
+                  <div class="card-body">
+                    <figure>
 
-                  </figure>
-                </div>
+                    </figure>
+                  </div>
 
-                <div class="card-footer">
-                  <figcaption id="projectcaption">
-                    <h5> ADOBE XD / HTML5 / CSS3 / JS </h5>
-                  </figcaption>
+                  <div class="card-footer">
+                    <figcaption id="projectcaption">
+                      <h5> ADOBE XD / HTML5 / CSS3 / JS </h5>
+                    </figcaption>
+                  </div>  
                 </div>
               </div>
             </div>
           </div> <!--3rd row of grid closes here-->
-        </div> <!--projects grid class ends here-->
+        <!-- </div> projects grid class ends here -->
       </article>
     </section>
    
@@ -216,167 +222,143 @@
       </aside>
 
       <article class="articleSkills">
-        <div class="row">
+        <div class="row skillsRow">
           <div class="col-xl-3 col-lg-3 col-md-6 col-sm12">
+            
             <div id="skill1">
-              <a href="tel:+447765401734">
                 <figure class="skillsIcons">
                   <img class="wireframeImg" src="./images/wireframe.png"/>
                   <figcaption class="skillsCaption">
                     <h4> Wireframing </h4>
                   </figcaption>
                 </figure>
-              </a>
             </div>  
           </div>  
 
           <div class="col-xl-3 col-lg-3 col-md-6 col-sm12"> 
             <div id="skill2">
-              <a href="mailto:adil@mycompany.com">
                 <figure class="skillsIcons">
                   <img class="prototypeImg" src="./images/prototype.png"/>
                   <figcaption class="skillsCaption">
                     <h4> Prototyping </h4>
                   </figcaption>
                 </figure>
-              </a>
             </div>
           </div>
 
           <div class="col-xl-3 col-lg-3 col-md-6 col-sm12">  
             <div id="skill3">
-              <a href="https://www.linkedin.com/in/adilseco2/" target="_blank">
                 <figure class="skillsIcons">
                   <img class="uxImg" src="./images/design.png"/>
                   <figcaption class="skillsCaption">
                     <h4> UX Design </h4>
                   </figcaption>
                 </figure>
-              </a>
             </div>
           </div> 
         
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm12">  
           <div id="skill4">
-            <a href="https://github.com/adil7-a7" target="_blank">
               <figure class="skillsIcons">
                 <i class="fa-brands fa-figma fa-3x" aria-hidden="true"> </i>
                 <figcaption class="skillsCaption">
                   <h4> Figma</h4>
                 </figcaption>
               </figure>
-            </a>
           </div>
         </div>  
-      </div> <!--1st row of skills end here-->  
+      </div> <!--1st row skillsRow of skills end here-->  
 
-      <div class="row">
+      <div class="row skillsRow">
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm12">
         <div id="skill5">
-          <a href="https://github.com/adil7-a7" target="_blank">
             <figure class="skillsIcons">
-              <i class="fa-brands fa-html5"></i>
+              <i class="fa-brands fa-html5 fa-4x"></i>
               <figcaption class="skillsCaption">
                 <h4> HTML5 </h4>
               </figcaption>
             </figure>
-          </a>
         </div>
       </div>
       
       <div class="col-xl-3 col-lg-3 col-md-6 col-sm12">
         <div id="skill6">
-          <a href="https://github.com/adil7-a7" target="_blank">
             <figure class="skillsIcons">
-              <i class="fa-brands fa-css3-alt"></i>
+              <i class="fa-brands fa-css3-alt fa-4x"></i>
               <figcaption class="skillsCaption">
                 <h4> CSS3 </h4>
               </figcaption>
             </figure>
-          </a>
         </div>
       </div> 
 
       <div class="col-xl-3 col-lg-3 col-md-6 col-sm12">
         <div id="skill7">
-          <a href="https://github.com/adil7-a7" target="_blank">
             <figure class="skillsIcons">
-              <i class="fa-brands fa-bootstrap"></i>
+              <i class="fa-brands fa-bootstrap fa-4x"></i>
               <figcaption class="skillsCaption">
                 <h4> Bootstrap </h4>
               </figcaption>
             </figure>
-          </a>
         </div>
       </div>
       
       <div class="col-xl-3 col-lg-3 col-md-6 col-sm12">
         <div id="skill8">
-          <a href="https://github.com/adil7-a7" target="_blank">
             <figure class="skillsIcons">
-              <i class="fa-brands fa-wordpress"></i>
+              <i class="fa-brands fa-wordpress fa-4x"></i>
               <figcaption class="skillsCaption">
-                <h4> WORDPRESS </h4>
+                <h4> Wordpress </h4>
               </figcaption>
             </figure>
-          </a>
         </div>
       </div>
     </div>
     
-    <div class="row">
+    <div class="row skillsRow">
       <div class="col-xl-3 col-lg-3 col-md-6 col-sm12">
         <div id="skill9">
-          <a href="https://github.com/adil7-a7" target="_blank">
             <figure class="skillsIcons">
-              <i class="fab fa-js"></i>
+              <i class="fab fa-js fa-4x"></i>
               <figcaption class="skillsCaption">
-                <h4> JavaScript </h4>
+                <h4> Vanilla JS | jQuery </h4>
               </figcaption>
             </figure>
-          </a>
         </div>
       </div>
-      
 
       <div class="col-xl-3 col-lg-3 col-md-6 col-sm12">
         <div id="skill10">
-          <a href="https://github.com/adil7-a7" target="_blank">
             <figure class="skillsIcons">
-              <i class="fa fa-github fa-3x" aria-hidden="true"> </i>
-              <figcaption class="skillsCaption">
-                <h4> jQuery </h4>
-              </figcaption>
-            </figure>
-          </a>
-        </div>
-      </div>  
-
-      <div class="col-xl-3 col-lg-3 col-md-6 col-sm12">
-        <div id="skill11">
-          <a href="https://github.com/adil7-a7" target="_blank">
-            <figure class="skillsIcons">
-              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-react fa-4x"></i>
               <figcaption class="skillsCaption">
                 <h4> ReactJS </h4>
               </figcaption>
             </figure>
-          </a>
         </div>
       </div>  
       
       <div class="col-xl-3 col-lg-3 col-md-6 col-sm12"> 
-        <div id="skill12">
-          <a href="https://github.com/adil7-a7" target="_blank">
+        <div id="skill11">
             <figure class="skillsIcons">
-              <i class="fa-light fa-code"></i>
+              <i class="fa fa-terminal fa-4x"></i>
               <figcaption class="skillsCaption">
                 <h4> API </h4>
               </figcaption>
             </figure>
-          </a>
         </div>
       </div> 
+
+      <div class="col-xl-3 col-lg-3 col-md-6 col-sm12"> 
+        <div id="skill12">
+            <figure class="skillsIcons">
+              <i class="fa-brands fa-aws fa-4x"></i>
+              <figcaption class="skillsCaption">
+                <h4> Amazon Web Services </h4>
+              </figcaption>
+            </figure>
+        </div>
+      </div>  
     </div> <!--Row End Here (justpush it down to add more skills)-->   
     </article>
   </section>
@@ -448,9 +430,18 @@
     </section>
 
     <footer>
-      <h3>All rights reserved &copy;</h3>
-      <br>
-      <h4> Designed by ADIL SECO &REG;</h4>
+      <div class="siteNav">
+        <button> Home </button>
+        <button> About Me </button>
+        <button> Work </button>
+        <button> Skills </button>
+        <button> Resume </button>
+      </div>
+      <div class="rights">
+        <h3>All rights reserved &copy;</h3>
+        <br>
+        <h4> Designed by ADIL SECO &REG;</h4>
+    </div>
     </footer>
   </main>
   <script src="https://kit.fontawesome.com/38c20b2da6.js" crossorigin="anonymous"></script>

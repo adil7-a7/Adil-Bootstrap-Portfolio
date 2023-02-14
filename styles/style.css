@@ -13,7 +13,7 @@
     --captiontextcolor: black;
 }
 
-body, nav,main, .jumbotron, #projectcaption
+body, nav,main, .jumbotron
 {
     background: var(--gradientcolor1);
     background: linear-gradient(90deg ,var(--gradientcolor1) 0%, var(--gradientcolor2) 59%, var(--gradientcolor3) 100%) ;
@@ -224,6 +224,10 @@ li a:hover
 
 #workArticle {
     grid-area: workArticle;
+    display: grid;
+    margin-right: 2%;
+    grid-gap: 2em;
+    
 }
 
 
@@ -242,7 +246,7 @@ li a:hover
 
 .projects 
 {
-    margin: 5px;
+    
     cursor: pointer;
     box-shadow: 0px 5px 25px var(--textcolor);
     transition: box-shadow 0.8s;
@@ -291,28 +295,64 @@ li a:hover
     height: auto;
 }
 
+.projectImage
+{
+    background-position: center center ;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    cursor: pointer;
+    background-size:120%;
+    /* -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%); */
+    opacity: 0.7;
+}
+.projectImage:hover
+{
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+    transform: scale(0.98);
+    box-shadow: 0 0 5px -2px linear-gradient(90deg ,var(--gradientcolor1) 0%, var(--gradientcolor2) 59%, var(--gradientcolor3) 100%);
+    background-size:130%;
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+
+.card-title, .card-footer 
+{
+    background-color: var(--textcolor);
+    color: var(--gradientcolor1);
+	/* background: linear-gradient(to right, var(--gradientcolor1) 0%, var(--gradientcolor2) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; */
+    margin: 2%;
+}
+
+
+.card-body
+{
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
 /*Project Caption*/
 #projectcaption 
 {
-    /* padding: 7px; */
-    /* background-color; */
+    
     margin: none;
-    background-color: white ;
-    color: var(--textcolor);
+    /* background-color: white ; */
+    /* color: var(--textcolor); */
     width: 100%;
     height: max-content;
     text-align: left;
     border-bottom: 2px solid var(--textcolor);
-    transition: transform 0.9s;
 }
 
 #projectcaption > h2 , h5
 {
     margin-left: 2%;
-}
-
-#projectcaption:hover {
-    transform: scale(1.1);
 }
 
 /* Skills Grid */
@@ -332,9 +372,11 @@ li a:hover
     margin-left: 20%;
 }
 
+
 .articleSkills
 {   
     grid-area: articleSkills;
+    
     /* display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -342,6 +384,25 @@ li a:hover
     text-align: center;
     width: 90%; */
 }
+.skillsRow
+{
+    display: flex;
+    row-gap: 2em ;
+    margin-right: 7%;
+    margin-bottom: 5%;
+}
+
+.skillsIcons
+{
+    color: var(--textcolor);
+    text-align: center;
+}
+
+.wireframeImg, .prototypeImg, .uxImg, .apiImg
+{
+    width: 55px;
+}
+
 
 
 
@@ -367,17 +428,8 @@ li a:hover
     justify-content: space-evenly;
     text-decoration: none;
     text-align: center;
+    
 
-}
-.skillsIcons
-{
-    color: var(--textcolor);
-    text-align: center;
-}
-
-.wireframeImg, .prototypeImg, .uxImg
-{
-    width: 50px;
 }
 
 /*Defining Grid Area for the Icons to be used in media for mobile and tablets */
