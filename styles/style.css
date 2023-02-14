@@ -36,7 +36,7 @@ body, nav,main, .jumbotron
 /*nav bar menu*/
 nav 
 {
-    position: fixed;
+    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -475,15 +475,31 @@ li a:hover
 
 footer
 {
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
     color: var(--textcolor);
-    margin: auto;
-    margin-bottom: 4%;
+    /* margin-bottom: 4%; */
     border-top: 2px solid var(--textcolor);
 }
 
+.footerbtnContainer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.footerbtn
+{
+    background-color: white;
+}
+.footerbtn:hover
+{
+    background-color: var(--textcolor);
+    box-shadow: 0px 0px 0px 20px var(--textcolor);
+}
 
 /*Style for tablets*/
 @media screen and (max-width:768px) 
