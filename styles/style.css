@@ -177,10 +177,7 @@ li a:hover
     grid-template-columns: 20% 80%;
     grid-template-rows: auto;
     grid-template-areas: 'aboutMeAside aboutMeArticle';
-    margin-top: 10%;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: auto;
+    margin: 12% 0;
 
 }
 
@@ -200,6 +197,7 @@ li a:hover
     text-align: justify;
     font-size: smaller;
     font-weight: bolder;
+    margin-right: 8%;
 
 }
 
@@ -386,17 +384,6 @@ li a:hover
 }
 
 
-
-
-/*Contact Me Grid */
-/* #contactMeGrid {
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: auto;
-    grid-template-areas: 'asideContactMe articleContactMe';
-    margin-top: 10%;
-} */
-
 #asideContactMe {
     grid-area: asideContactMe;
     margin-left: 20%;
@@ -413,10 +400,29 @@ li a:hover
     text-align: center;
 }
 
+/*setting the icons in contact me to the secondary color*/
+.contactIcons {
+    color: var(--textcolor);
+}
+
+/* aligning text of contact icons */
+.contactCaption {
+    align-items: center;
+    justify-content: center;
+    color: var(--textcolor);
+    /* margin-top: 10%; */
+}
+
+.articleContactMe a {
+    text-decoration: none;
+}
+
+
 .contactIcons:hover
 {
-    
+   background: linear-gradient(90deg ,var(--gradientcolor1) 20%, var(--gradientcolor2) 59%, var(--gradientcolor3) 100%) ;
 }
+
 /*Defining Grid Area for the Icons to be used in media for mobile and tablets */
 .call {
     grid-area: call;
@@ -431,23 +437,7 @@ li a:hover
 }
 
 
-/*setting the icons in contact me to the secondary color*/
-.contactIcons {
-    color: var(--textcolor);
-}
 
-
-.contactCaption {
-    align-items: center;
-    justify-content: center;
-    color: var(--textcolor);
-    /* margin-top: 10%; */
-}
-
-.articleContactMe a {
-    text-decoration: none;
-
-}
 
 
 /*Resume Grid*/
@@ -467,7 +457,6 @@ li a:hover
 
 #articleResume {
     grid-area: articleResume;
-    margin-left: 30%;
     align-items: center;
     justify-content: center;
 }
@@ -541,9 +530,9 @@ footer
     {
         background-image: inherit;
         background-color: none;
-        position: fixed;
+        position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         width: 100%;
         overflow: hidden;
         /* border-bottom: 2px solid var(--secondarycolor); */
@@ -587,27 +576,20 @@ footer
         border: var(--secondarycolor);
         border-radius: 20%;
         height: 22vh;
-        box-shadow: -4px 6px 10px var(--secondarycolor);    
     }
 
      /*About Me Grid for Tablet*/
      #aboutMeGrid {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            'aboutMeAside'
-            /*1st row*/
-            'aboutMeArticle';
-        /*2nd row*/
+        display: flex;
+        flex-direction: column;
         margin-top: 5%;
     }
 
     /* About me Article text for Tablet */
-    #aboutMeArticle {
-        grid-area: aboutMeArticle;
-        justify-content: center;
-        align-items: center;
+    #aboutMeArticle 
+    {
+        /* justify-content: center;
+        align-items: center; */
         margin-left: 12%;
         margin-top: 0.1vh;
         text-align: justify;
@@ -615,18 +597,19 @@ footer
     
     }
 
-    #workGrid {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            'workAside'
-            /*1st row*/
-            'workArticle';
-        /*2nd row*/
+    #skillsGrid
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #workGrid 
+    {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 5%;
+        /* margin-top: 5%; */
     }
 
     /*Centering Aside Text and Items to Centre for Tablet*/
