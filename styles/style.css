@@ -20,12 +20,13 @@ body, nav,main, .jumbotron
     
 }
 
-* 
+* , * a
 {
     scroll-behavior: smooth;
     font-family: 'Questrial', 'Mulish', 'Open Sans', 'Verdana', 'Arial';
     margin: 0px;
     padding: 0px;
+    text-decoration: none;
 }
 
 
@@ -174,13 +175,37 @@ li a:hover
 /*About Me Grid*/
 #aboutMeGrid {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 20% 70% 10%;
     grid-template-rows: auto;
-    grid-template-areas: 'aboutMeAside aboutMeArticle';
+    grid-template-areas: 'aboutMeAside aboutMeArticle contactMeBtn';
     margin: 12% 0;
 
 }
 
+
+.contactMeBtn
+{
+    display: flex;
+    grid-area: contactMeBtn;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 40%;
+    margin-right: 20%;
+    color: var(--gradientcolor1);
+    font-weight: 575;
+
+}
+
+.contactMeBtn:hover, .contactMeBtn a:hover
+{
+    background:linear-gradient(90deg ,var(--gradientcolor1) 0%, var(--gradientcolor1) 59%, var(--gradientcolor2) 100%);
+    color: var(--textcolor);
+}
+.contactMeBtn a 
+{
+    text-decoration: none;
+    color: var(--gradientcolor1);
+}
 /*Defining About me 1st column Grid Area*/
 #aboutMeAside {
     grid-area: aboutMeAside;
@@ -201,6 +226,16 @@ li a:hover
 
 }
 
+.getInTouchBtn
+{
+    background-color: var(--textcolor);
+}
+
+.getInTouchBtn:hover
+{
+
+}
+.
 /* Projects/Work grid of 2 columns*/
 #workGrid {
     display: grid;
@@ -419,7 +454,7 @@ li a:hover
 
 .contactIcons:hover
 {
-   background: linear-gradient(90deg ,var(--gradientcolor1) 20%, var(--gradientcolor2) 59%, var(--gradientcolor3) 100%) ;
+   transform: scale (1.2);
 }
 
 /*Defining Grid Area for the Icons to be used in media for mobile and tablets */
@@ -435,12 +470,9 @@ li a:hover
     grid-area: linkedin;
 }
 
-
-
-
-
 /*Resume Grid*/
-#resumeGrid {
+#resumeGrid 
+{
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: auto;
@@ -449,12 +481,14 @@ li a:hover
     margin-bottom: 15%;
 }
 
-#asideResume {
+#asideResume 
+{
     grid-area: asideResume;
     margin-left: 20%;
 }
 
-#articleResume {
+#articleResume 
+{
     grid-area: articleResume;
     align-items: center;
     justify-content: center;
@@ -468,10 +502,12 @@ footer
     margin-bottom: 2%;
     border-top: 1px solid var(--textcolor);
 }
+
 #footerCol
 {
     margin-top: 5%;
 }
+
 .footerbtnContainer
 {
     display: flex;
@@ -481,7 +517,7 @@ footer
     margin: 2%;
 
 }
-.btn-light, .btn-light a
+.footerBtn, .footerBtn a
 {
     background:linear-gradient(90deg ,var(--gradientcolor1) 0%, var(--gradientcolor1) 59%, var(--gradientcolor2) 100%) ;
     /* border: 2px solid var(--textcolor); */
