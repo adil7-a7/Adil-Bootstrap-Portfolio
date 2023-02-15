@@ -226,7 +226,6 @@ li a:hover
 
 .projects 
 {
-    
     cursor: pointer;
     box-shadow: 0px 5px 25px var(--textcolor);
     transition: box-shadow 0.8s;
@@ -504,6 +503,7 @@ footer
     justify-content: center;
     align-items: center;
 }
+
 /*Style for tablets*/
 @media screen and (max-width:768px) 
 {
@@ -528,14 +528,10 @@ footer
     /*nav bar menu for tablet*/
     nav
     {
-        background-image: inherit;
-        background-color: none;
         position: relative;
         display: flex;
-        justify-content: space-evenly;
-        width: 100%;
+        /* justify-content: flex-end; */
         overflow: hidden;
-        /* border-bottom: 2px solid var(--secondarycolor); */
 
     }
 
@@ -543,8 +539,7 @@ footer
     ul {
         list-style-type: none;
         display: flex;
-        justify-content: space-between;
-        margin-right: 15%;
+        justify-content: space-evenly;
 
     }
 
@@ -553,17 +548,6 @@ footer
         margin-left: 5%;
     }
 
-    /* margins for introAside for tablet */
-    .introAside
-    {
-        margin-left: 5%;
-        
-    }
-
-    #introArticle
-    {
-        margin-right: 5% ;
-    }
 
     #introText > h2
     {
@@ -575,21 +559,15 @@ footer
         overflow: hidden;
         border: var(--secondarycolor);
         border-radius: 20%;
-        height: 22vh;
+        height: 40vh;
     }
 
-     /*About Me Grid for Tablet*/
-     #aboutMeGrid {
-        display: flex;
-        flex-direction: column;
-        margin-top: 5%;
-    }
+
 
     /* About me Article text for Tablet */
     #aboutMeArticle 
     {
-        /* justify-content: center;
-        align-items: center; */
+
         margin-left: 12%;
         margin-top: 0.1vh;
         text-align: justify;
@@ -597,20 +575,15 @@ footer
     
     }
 
-    #skillsGrid
-    {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    #workGrid 
+    #skillsGrid,#workGrid ,#aboutMeGrid, #resumeGrid
     {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        /* margin-top: 5%; */
+        /* align-items: center; */
     }
+
+    
 
     /*Centering Aside Text and Items to Centre for Tablet*/
     .aboutMeAside .workAside .asideContactMe .asideResume {
@@ -625,65 +598,7 @@ footer
         margin: 0vh;
     }
 
-    /* Adding box shadow by default to project pictures to show separation */
-    .projects 
-    {
-        margin: 1vh;
-        box-shadow: 0px 0px 12px var(--secondarycolor);
-    }
 
-    /* removing box shadow from hover */
-    .projects:hover
-    {
-        box-shadow: none
-    }
-
-
-    /*Contact Me Grid */
-    #contactMeGrid {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            'asideContactMe'    /*1st row*/
-            'articleContactMe'; /*2nd row*/
-        margin-top: 10%;
-    }
-    
-    /*Creating a Grid for the Icons of 2/2 columns and rows*/
-    .articleContactMe {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            'call email'        /*1st row*/
-            'linkedin github';   /*2nd row*/
-            
-        
-        grid-gap: 5em;
-
-    }
-
-    .contactCaption {
-        align-items: center;
-        justify-content: center;
-        color: var(--textcolor);
-        margin-top: 2%;
-    }
-
-    /*Resume Grid for Mobile*/
-    #resumeGrid {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            'asideResume'
-            /*1st row*/
-            'articleResume';
-        /*2nd row*/
-        margin-top: 10%;
-        margin-bottom: 5%;
-    }
     #asideResume
     {
         margin-bottom: 2%;
@@ -691,9 +606,9 @@ footer
 
     #articleResume {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-left: 20%;
+    align-items: center;
+    justify-content: center;
+  
 
     }
 
@@ -815,6 +730,14 @@ footer
     }
 
 
+    #skillsGrid,#workGrid ,#aboutMeGrid, #resumeGrid
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+    }
+
     #introArticle {
         grid-area: inherit;
         color: var(--textcolor);
@@ -845,18 +768,7 @@ footer
         font-weight: lighter;
     }
 
-    /*About Me Grid for Mobile*/
-    #aboutMeGrid {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            'aboutMeAside'
-            /*1st row*/
-            'aboutMeArticle';
-        /*2nd row*/
-        margin-top: 5%;
-    }
+
 
     #aboutMeAside
     {
@@ -875,19 +787,6 @@ footer
     
     }
 
-    #workGrid {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            'workAside'
-            /*1st row*/
-            'workArticle';
-        /*2nd row*/
-        justify-content: center;
-        align-items: center;
-        margin-top: 5%;
-    }
 
     /*Centering Aside Text and Items to Centre for Mobile*/
     .aboutMeAside .workAside .asideContactMe .asideResume {
@@ -909,77 +808,6 @@ footer
         box-shadow: none;
     }
 
-    /* Defining the grid layout as rows for Mobile*/
-    #projectsGrid {
-        display: grid;
-        margin-left: 7%;
-        margin-right: 7%;
-        grid-template-rows: auto;
-        grid-template-columns: auto;
-        grid-template-areas:
-            'project1'
-            /*1st row*/
-            'project2'
-            /*2nd row*/
-            'project3'
-            /*3rd row*/
-            'project4'
-            /*4th row*/
-            'project5';
-        /*5th row*/
-
-        grid-gap: 0.5em;
-    }
-
-    /*Contact Me Grid */
-    #contactMeGrid {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            'asideContactMe'
-            /*1st row*/
-            'articleContactMe';
-        /*2nd row*/
-        margin-top: 10%;
-    }
-
-    /*Creating a Grid for the Icons to stack up as rows*/
-    .articleContactMe {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            'call'
-            /*1st row*/
-            'email'
-            /*2nd row*/
-            'linkedin';
-        /*3rd row*/
-        grid-gap: 4em;
-
-    }
-
-    .contactCaption {
-        align-items: center;
-        justify-content: center;
-        color: var(--textcolor);
-        margin-top: 2%;
-    }
-
-    /*Resume Grid for Mobile*/
-    #resumeGrid {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            'asideResume'
-            /*1st row*/
-            'articleResume';
-        /*2nd row*/
-        margin-top: 10%;
-        margin-bottom: 15%;
-    }
 
     #articleResume {
     display: flex;
