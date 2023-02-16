@@ -255,10 +255,10 @@ li a:hover
     
 }
 
-.projects 
+#projects 
 {
     cursor: pointer;
-    margin-bottom: 5%;
+    margin-bottom: 1.5%;
     transition: box-shadow 0.8s;
 }
 
