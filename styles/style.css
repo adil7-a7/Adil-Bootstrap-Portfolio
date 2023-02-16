@@ -189,12 +189,14 @@ li a:hover
 
 .contactMeBtn
 {
-    display: flex;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     grid-area: contactMeBtn;
     width: fit-content;
     height: fit-content;
     margin-top: 40%;
-    margin-right: 20%;
     color: var(--gradientcolor1);
     font-weight: 575;
 
@@ -205,6 +207,7 @@ li a:hover
     background:linear-gradient(90deg ,var(--gradientcolor1) 0%, var(--gradientcolor1) 59%, var(--gradientcolor2) 100%);
     color: var(--textcolor);
 }
+
 .contactMeBtn a 
 {
     text-decoration: none;
@@ -239,14 +242,15 @@ li a:hover
 {
 
 }
-.
+
 /* Projects/Work grid of 2 columns*/
-#workGrid {
+#workGrid 
+{
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: auto;
     grid-template-areas: 'workAside workArticle';
-    margin-top: 5%;
+    margin-top: 10%;
 }
 
 /* Defining margins for Work aside */
@@ -257,16 +261,14 @@ li a:hover
 
 #workArticle {
     grid-area: workArticle;
-    display: grid;
-    margin-right: 2%;
-    grid-gap: 2em;
+    margin-right: 10%;
     
 }
 
 .projects 
 {
     cursor: pointer;
-    box-shadow: 0px 5px 25px var(--textcolor);
+    margin-bottom: 5%;
     transition: box-shadow 0.8s;
 }
 
@@ -275,13 +277,30 @@ li a:hover
     text-decoration: none;
 }
 
+#transparent
+{
+    background:linear-gradient(10deg ,var(--gradientcolor1) 0%, var(--gradientcolor1) 59%, var(--gradientcolor2) 100%) ;
+    opacity: 0.8;
+    height: fit-content;
+}
 
-#project1 {
+#transparent:hover
+{
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+    transform: scale(0.99);
+    box-shadow: 0 0 5px -2px linear-gradient(90deg ,var(--gradientcolor1) 0%, var(--gradientcolor2) 59%, var(--gradientcolor3) 100%);
+    background-size:130%;
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#project1 
+{
     grid-area: project1;
     background-image: url("../images/02-portfolio-1.jpg");
     width: inherit;
     height: auto;
 }
+
 
 
 #project2 {
@@ -313,39 +332,12 @@ li a:hover
     height: auto;
 }
 
-.projectImage
-{
-    background-position: center center ;
-    background-repeat: no-repeat;
-    opacity: 0.9;
-    cursor: pointer;
-    background-size:120%;
-    /* -webkit-filter: grayscale(1);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%); */
-    opacity: 0.7;
-}
-.projectImage:hover
-{
-    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-    transform: scale(0.98);
-    box-shadow: 0 0 5px -2px linear-gradient(90deg ,var(--gradientcolor1) 0%, var(--gradientcolor2) 59%, var(--gradientcolor3) 100%);
-    background-size:130%;
-    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-
 
 
 .card-title, .card-footer 
-{
-    background-color: var(--textcolor);
-    color: var(--gradientcolor1);
-	/* background: linear-gradient(to right, var(--gradientcolor1) 0%, var(--gradientcolor2) 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;  */
-    margin: 2%;
+{   
+    color: var(--textcolor);
+	background: linear-gradient(to right, var(--gradientcolor1) 0%, var(--gradientcolor2) 100%);
 }
 
 
@@ -513,8 +505,13 @@ footer
 
 #contactLabel
 {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
+    margin: 2% 0 1%;
+  
 }
 
 .footerbtnContainer
