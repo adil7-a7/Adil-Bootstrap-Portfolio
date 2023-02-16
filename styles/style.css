@@ -307,7 +307,6 @@ li a:hover
     background-image: url("../images/02-portfolio-4.jpg");
     background-size: 100%;
     width: fit-content;
-    color: #090744;
 
 }
 
@@ -550,7 +549,10 @@ footer
 /*Style for tablets*/
 @media screen and (max-width:768px) 
 {
-
+    #asideSkills > h2
+    {
+        font-size: normal;
+    }
     /* defining font size for tablet*/
 
     #myNameinNav
@@ -559,7 +561,7 @@ footer
         letter-spacing: 1px;
     }
 
-    h3, h3, h2, .skillsCaption > h4 
+    .articleSkills, .skillsCaption > h4 
     {
         font-size:large;
 
