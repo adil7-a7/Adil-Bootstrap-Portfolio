@@ -425,6 +425,11 @@ li a:hover
     color: var(--textcolor);
 }
 
+.contactIcons:hover
+{
+    transform: scale(1.2);
+}
+
 /* aligning text of contact icons */
 .contactCaption {
     align-items: center;
