@@ -34,13 +34,14 @@ I used a Gradient to give a cool and modern feel to the vistor of the website.
 Gradient Color 2:
  - #a20070
 
-## Screenshot in Desktop width
+## Screenshots 
+##  Desktop width
 <img width="1034" alt="image" src="https://user-images.githubusercontent.com/117782725/219423520-e9604066-945a-4e8e-899d-526d6be6dd6c.png">
 
-## Screenshot in tablet width
+## Tablet width
 <img width="555" alt="image" src="https://user-images.githubusercontent.com/117782725/219423774-cb55c0b7-ffe3-4545-88f6-111e1600a92b.png">
 
-## Screenshot in mobile width
+## Mobile width
 <img width="359" alt="image" src="https://user-images.githubusercontent.com/117782725/219420570-f219449b-4fd6-49e9-9da4-27e5d29b2d39.png">
 
 
