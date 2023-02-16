@@ -20,13 +20,12 @@ body, nav,main, .jumbotron
     
 }
 
-* , * a
+* 
 {
     scroll-behavior: smooth;
     font-family: 'Questrial', 'Mulish', 'Open Sans', 'Verdana', 'Arial';
     margin: 0px;
     padding: 0px;
-    text-decoration: none;
 }
 
 
@@ -42,6 +41,7 @@ nav
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    margin-top: 2%;
 }
 
 /*items in the menu*/
@@ -85,22 +85,17 @@ li a:hover
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
-    text-align: center;
     color: var(--textcolor);
     margin-left: 5%;
 }
 
 /*defining style for the text in my logo in this case my name*/
 #myNameinNav {
-    /* margin-left: 10px;
-    margin-top: 10%; */
     margin: auto;
     text-align: center;
     font-family: Unbounded, 'Raleway', 'Mulish', 'Open Sans', 'Arial';
     font-weight: bold;
-
-
+    letter-spacing: 2px;
 }
 
 
@@ -111,10 +106,6 @@ li a:hover
     flex-direction: row;
     justify-content: space-around;
     align-items:center;
-    /* grid-template-rows: auto;
-    grid-template-columns: 20% 80%;
-    grid-template-areas: 'introAside introArticle'; */
-    /* background-color: var(--maincolor); */
     margin-left: 20%;
 }
 
@@ -255,13 +246,17 @@ li a:hover
     
 }
 
-#projects 
+#projects
 {
     cursor: pointer;
     margin-bottom: 1.5%;
-    transition: box-shadow 0.8s;
+    transition: 0.8s;
 }
 
+.projectsCard
+{
+
+}
 .projects a
 {
     text-decoration: none;
@@ -270,16 +265,13 @@ li a:hover
 #transparent
 {
     background:linear-gradient(10deg ,var(--gradientcolor1) 0%, var(--gradientcolor1) 59%, var(--gradientcolor2) 100%) ;
-    opacity: 0.8;
-    height: fit-content;
+    opacity: 0.85;
 }
 
 #transparent:hover
 {
-    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-    transform: scale(0.99);
-    box-shadow: 0 0 5px -2px linear-gradient(90deg ,var(--gradientcolor1) 0%, var(--gradientcolor2) 59%, var(--gradientcolor3) 100%);
-    background-size:130%;
+    /* transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1); */
+    transform: scale(0.997); 
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
@@ -287,6 +279,7 @@ li a:hover
 {
     grid-area: project1;
     background-image: url("../images/02-portfolio-1.jpg");
+    background-size: 100%;
     width: inherit;
     height: auto;
 }
@@ -296,22 +289,25 @@ li a:hover
 #project2 {
     grid-area: project2;
     background-image: url("../images/02-hero-bg.jpg");
-    width: inherit;
+    background-size: 100%;
+    width: fit-content;
     height: auto;
 }
 
 #project3 {
     grid-area: project3;
-    background-image: url("../images/02-portfolio-3.jpg");
-    width: inherit;
-    height: auto;
+    background-image: url("../images/football_stats_project.jpg");
+    background-size: 100%;
+    width: fit-content;
+
 }
 
 #project4 {
     grid-area: project4;
     background-image: url("../images/02-portfolio-4.jpg");
-    width: inherit;
-    height: auto;
+    background-size: 100%;
+    width: fit-content;
+    color: #090744;
 
 }
 
@@ -319,6 +315,8 @@ li a:hover
     grid-area: project5;
     background-image: url("../images/02-portfolio-2.jpg");
     width: inherit;
+    background-size: 100%;
+    width: fit-content;
     height: auto;
 }
 
@@ -328,12 +326,18 @@ li a:hover
     color: var(--textcolor);
 }
 
-.card-title, .card-footer 
+.card-title, .card-footer
 {   
     color: var(--textcolor);
 	background: linear-gradient(to right, var(--gradientcolor1) 0%, var(--gradientcolor2) 100%);
+    letter-spacing: 1px;
 }
 
+.card-body
+{
+    background: linear-gradient(to right, var(--gradientcolor1) 40%, var(--gradientcolor2) 100%);   
+    color: var(--textcolor);
+}
 
 
 /*Project Caption*/
@@ -548,49 +552,44 @@ footer
 {
 
     /* defining font size for tablet*/
-    h4 {
-        font-size: 0.8em;
+
+    #myNameinNav
+    {
+        font-size: medium;
+        letter-spacing: 1px;
     }
 
-    h3 {
-        font-size: 1.0em;
+    h3, h3, h2, .skillsCaption > h4 
+    {
+        font-size:large;
+
     }
 
-    h2 {
-        font-size: 1.4em;
+    ul li a 
+    {
+        font-size: medium;
     }
-
-    h1 {
-        font-size: 1.4em;
-    }
+  
 
     /*nav bar menu for tablet*/
     nav
     {
         position: relative;
         display: flex;
-        /* justify-content: flex-end; */
+        justify-content: flex-end;
+        align-items: center;
         overflow: hidden;
 
     }
 
     /*realigning items in the menu for tablet*/
     ul {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-evenly;
-
+        margin-left:10%;
     }
 
     .intro
     {
         margin-left: 5%;
-    }
-
-
-    #introText > h2
-    {
-        margin-bottom: 1vh;
     }
 
     .mypic
@@ -601,62 +600,54 @@ footer
         height: 40vh;
     }
 
-
-
     /* About me Article text for Tablet */
     #aboutMeArticle 
     {
 
-        margin-left: 12%;
-        margin-top: 0.1vh;
+        margin-left: 10%;
         text-align: justify;
         margin-right: 10%;
     
     }
 
-    #skillsGrid,#workGrid ,#aboutMeGrid, #resumeGrid
+    #skillsGrid,#workGrid ,#aboutMeGrid, #resumeGrid, #workArticle, #aboutMeArticle
     {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* align-items: center; */
     }
 
-    
-
-    /*Centering Aside Text and Items to Centre for Tablet*/
-    .aboutMeAside .workAside .asideContactMe .asideResume {
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-left: none;
-    }
-
-    .projects
+    #workArticle
     {
-        margin: 0vh;
+      margin-left: 12%;
     }
 
 
-    #asideResume
+    .contactMeBtn
     {
-        margin-bottom: 2%;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        margin-left: 40%;
     }
 
     #articleResume {
     display: flex;
     align-items: center;
     justify-content: center;
-  
-
-    }
+}
 
     .asideBorder {
         border-bottom: 2px solid var(--textcolor);
         display: flex;
         margin-bottom: 5%;
         margin-top: 5px;
-        border-right: none;
+        
+    }
+
+    .card
+    {
+        margin-bottom: 10vh;
     }
 
 }
@@ -672,94 +663,43 @@ footer
         border-right: none;
     }
 
-    h4 {
-        font-size: 0.8em;
-    }
-
-    h3 {
-        font-size: 1.0em;
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
-
-    h1 {
-        font-size: 1.2em;
+    h1,h2,h3,h4{
+        font-size: large;
     }
 
     /* Mobile nav menu */
     nav {
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: auto;
-        grid-template-areas: 'logo' 'navMenulist';
+        display: flex;
+        flex-direction: column;
         position: relative;
+        justify-content: space-evenly;
+        
     }
 
     /* List items for Mobile nav */
     ul {
         list-style-type: none;
         display: flex;
-        justify-content: space-between;
-        margin-right: 0.5%;
+        flex-wrap: nowrap;
+        margin-right: 5%;
     
     }
 
+
    li a 
    {
-        margin: 20px;
+        margin: 10px;
         text-decoration: none;
-        color: var(--secondarycolor);
         width: fit-content;
     }
-
-    .logo {
-        grid-area: logo;
-        text-align: center;
-    }
-
-    #myNameinNav {
-        text-align: center;
-        margin-bottom: 1.5%;
-    }
-
-    .navMenulist {
-        grid-area: navMenulist;
-        justify-content: space-between;
-    }
-
-    .navMenulist li a {
-        grid-area: navMenulist;
-        justify-content: space-between;
-    }
-
-    /* Displaying each area as a row for mobile*/
-    .intro {
-
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            'introAside' /* 1st row*/
-            'introArticle'; /* 2nd row*/
-       
+    .intro 
+    {
+        display: flex;
+        flex-direction: column;
     }
 
     .mypic {
-        overflow: hidden;
-        border: var(--secondarycolor);
-        border-radius: 20%;
-        height: 23vh;
-        box-shadow: -4px 3px 10px var(--secondarycolor);
-    }
-
-    .myName
-    {
-        word-wrap:normal;
-    }
-    #profilePic {
-        text-align: center;
+        height: 32vh;
     }
 
 
@@ -774,12 +714,9 @@ footer
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* align-items: center; */
     }
 
     #introArticle {
-        grid-area: inherit;
-        color: var(--textcolor);
         margin-top: 5%;
         margin-bottom: 10%;
         margin-left: 7%;
@@ -787,72 +724,36 @@ footer
         word-wrap: wrap;
     }
 
-    #introText {
-        margin-top: 7%;
-        margin-bottom: 7%;
-        margin-left: 7%;
-        margin-right: 7%;
-        flex-wrap: wrap;
-        text-align: justify;
-
+    .articleContactMe
+    {
+        display: flex;
+        flex-direction: column;
     }
-
-    
-    /*Caption below my profile Pic for mobile*/
-    .myName {
-        margin-top: 2%;
-        justify-content: center;
-        align-items: center;
-        color: var(--textcolor);
-        font-weight: lighter;
+    .card
+    {
+        margin-bottom: 10vh;
     }
-
-
-
     #aboutMeAside
     {
         margin-bottom: 3vh;
     }
 
     /* About me Article text for Mobile */
-    #aboutMeArticle {
-        grid-area: aboutMeArticle;
+    #aboutMeArticle 
+    {
         justify-content: center;
         align-items: center;
         margin-left: 12%;
         margin-top: 0.1vh;
         text-align: justify;
         margin-right: 12%;
+        margin-bottom: 5%;
     
     }
 
-
-    /*Centering Aside Text and Items to Centre for Mobile*/
-    .aboutMeAside .workAside .asideContactMe .asideResume {
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-left: none;
-    }
-
-    /* Adding box shadow for mobile version without having to hover */
-    .projects {
-        margin: 1vh;
-        box-shadow: 0px 0px 12px var(--secondarycolor);
-    }
-
-
-    /* Removing box-shadow for mobile for hover */
-    .projects:hover {
-        box-shadow: none;
-    }
-
-
     #articleResume {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-left: 20%;
+    justify-content: center;
     }
 
     
